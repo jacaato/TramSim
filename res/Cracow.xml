@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Simulation>
+
+    <!-- przystanki -->
+	<Stops>
+	    <TramStop name="Główny">
+	    	<Point x="100" y="100"/>
+	    </TramStop>
+	    <TramStop name="Fabryczny">
+	    	<Point x="50" y="300"/>
+	    </TramStop>
+	    <TramStop name="Zatyłcze">
+	    	<Point x="500" y="200"/>
+	    </TramStop>
+	    <TramStop name="Dalekowieś">
+	    	<Point x="400" y="400"/>
+	    </TramStop>
+	    <TramStop name="Dalekotył">
+	    	<Point x="600" y="150"/>
+	    </TramStop>
+	</Stops>
+	
+  	<!-- trasy pomiędzy przystankami -->
+	<Routes>
+	   <Route>
+	        <Stop name="Zatyłcze" />
+	        <Stop name="Dalekotył" />
+	        <LinkingRoutes>
+	            <LinkingRoute type="track" speed="6">
+	            	<Point x="500" y="200"/>
+	            	<Point x="600" y="150"/>
+	            </LinkingRoute>
+	        </LinkingRoutes>
+	    </Route>
+	   <Route>
+	        <Stop name="Główny" />
+	        <Stop name="Dalekowieś" />
+	        <LinkingRoutes>
+	            <LinkingRoute type="track" speed="4">
+	            	<Point x="100" y="100"/>
+	            	<Point x="400" y="400"/>
+	            </LinkingRoute>
+	        </LinkingRoutes>
+	    </Route>
+	    <Route>
+	        <Stop name="Główny" />
+	        <Stop name="Fabryczny" />
+	        <LinkingRoutes>
+	            <LinkingRoute type="track" speed="3">
+	            	<Point x="100" y="100"/>
+	            	<Point x="60" y="200"/>
+	            </LinkingRoute>
+	            <LinkingRoute type="track" speed="2">
+	            	<Point x="60" y="200"/>
+	            	<Point x="50" y="300"/>
+	            </LinkingRoute>
+	        </LinkingRoutes>
+	    </Route>
+	    
+	    <Route>
+	    	<Stop name="Główny"/>
+	    	<Stop name="Zatyłcze"/>
+	    	<LinkingRoutes>
+	    	    <LinkingRoute type="track" speed="4">
+	            	<Point x="100" y="100"/>
+	            	<Point x="180" y="150"/>
+	            </LinkingRoute>
+	            <LinkingRoute type="track" speed="1">
+	            	<Point x="180" y="150"/>
+	            	<Point x="300" y="150"/>
+	           	</LinkingRoute>
+	            <LinkingRoute type="track" speed="2">
+	            	<Point x="300" y="150"/>
+	            	<Point x="500" y="200"/>
+	            </LinkingRoute>
+	    	</LinkingRoutes>
+	    </Route>
+	    
+	    <Route>
+	    	<Stop name="Fabryczny" />
+	    	<Stop name="Dalekowieś" />
+	    	<LinkingRoutes>
+	    	    <LinkingRoute type="track" speed="6">
+	            	<Point x="50" y="300"/>
+	            	<Point x="200" y="230"/>
+	            </LinkingRoute>
+	            <LinkingRoute type="track" speed="2">
+	            	<Point x="200" y="230"/>
+	            	<Point x="300" y="350"/>
+	           	</LinkingRoute>
+	            <LinkingRoute type="track" speed="9">
+	            	<Point x="300" y="350"/>
+	            	<Point x="400" y="400"/>
+	            </LinkingRoute>
+	    	</LinkingRoutes>
+	    </Route>
+	    
+	    <Route>
+	    	<Stop name="Dalekowieś"/>
+	    	<Stop name="Zatyłcze"/>
+	    	<LinkingRoutes>
+	    	    <LinkingRoute type="track" speed="4">
+	            	<Point x="400" y="400"/>
+	            	<Point x="450" y="300"/>
+	            </LinkingRoute>
+	            <LinkingRoute type="track" speed="1">
+	            	<Point x="450" y="300"/>
+	            	<Point x="530" y="250"/>
+	           	</LinkingRoute>
+	            <LinkingRoute type="track" speed="2">
+	            	<Point x="530" y="250"/>
+	            	<Point x="500" y="200"/>
+	            </LinkingRoute>
+	    	</LinkingRoutes>
+	    </Route>
+	    
+	</Routes>
+	
+	<!-- tramwaje -->
+	<Trams>
+	    <Tram id="1" capacity="150" >
+	    	<Stop name="Główny"/>
+	    	<Stop name="Fabryczny"/>
+	        <Stop name="Dalekowieś"/>
+	    </Tram>
+	    
+	    <Tram id="2" capacity="150" >
+	    	<Stop name="Dalekowieś"/>
+	    	<Stop name="Zatyłcze"/>
+	    	<Stop name="Główny"/>
+	    </Tram>    
+	    
+	    <Tram id="3" capacity="80">
+	        <Stop name="Główny"/>
+	    	<Stop name="Dalekowieś"/>
+	    </Tram>
+	    
+	    <Tram id="4" capacity="100" >
+	    	<Stop name="Zatyłcze"/>
+	    	<Stop name="Dalekotył"/>
+	    </Tram>  
+	    
+	    <!-- <Tram id="5" capacity="100" >
+	    	<Stop name="Zatyłcze"/>
+	    	<Stop name="Główny"/>
+	    	<Stop name="Fabryczny"/>
+	    </Tram>  -->  
+	    
+	</Trams>
+	
+</Simulation>
